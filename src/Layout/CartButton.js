@@ -6,7 +6,7 @@ import styles from './CartButton.module.css'
 const CartButton = (props) => {
   const cartCtx = useContext(CartContext)
 
-
+// takes all items and totals the amounts
   const numberOfCartItems = cartCtx.items.reduce((currNumber, item) => {
     return currNumber + item.amount
   }, 0)

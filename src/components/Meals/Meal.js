@@ -6,6 +6,7 @@ import MealItemForm from './MealItemForm';
 const Meal = (props) => {
   const cartCtx = useContext(CartContext);
   const price = `£${Number(props.price).toFixed(2)}`;
+  //forwarded amout from form
   const addToCartHandler = (amount) => {
     cartCtx.addItem({
       id: props.id,

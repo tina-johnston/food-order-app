@@ -7,6 +7,9 @@ const MealItemForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault()
     const enteredAmount = parseInt(amountInputRef.current.value)
+
+    //if check for validation for empty string. useState for message
+    //function to forward the value to meal where the rest of the data is
     props.addToCart(enteredAmount)
   }
   return (

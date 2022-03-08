@@ -12,7 +12,9 @@ const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `£${cartCtx.totalAmount.toFixed(2)}`;
+  //only show order button if there are items in cart
   const hasItems = cartCtx.items.length > 0;
+
   const cartItemAddHandler = (item) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
@@ -53,6 +55,8 @@ const Cart = (props) => {
       ))}
     </ul>
   );
+
+  //bind pre-confiures the arguments passed on
 
   const modalActions = (
     <div className={styles.actions}>

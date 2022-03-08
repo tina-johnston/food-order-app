@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Input.module.css';
 
+//ref for reusable input
+
 const Input = React.forwardRef((props, ref) => {
   return (
     <div className={styles.input}>
